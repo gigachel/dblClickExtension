@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Empty",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "Double click to clipboard",
+  "description": "Double click copy to clipboard",
   "version": "1.0",
   "icons": {
     "16": "images/empty_16.png",
@@ -12,17 +12,11 @@
   },
   "content_scripts": [{
     "matches": [
-      "*://*/*",
-      "https://*/",
-      "http://*/"
+      "*://*/*"
     ],
     "js": [ "content_scripts/end.js"],
     "run_at": "document_end"
   }],
-  "background": {
-    "scripts": ["eventPage.js"],
-    "persistent": false
-  },
   "permissions": [
     "http://*/",
     "https://*/",
@@ -37,7 +31,6 @@
       "64": "images/empty_64.png",
       "128": "images/empty_128.png"
     },
-    "default_title": "Empty",
-    "default_popup": "popup/popup.html"
+    "default_title": "Double click to clipboard"
   }
 }
